@@ -1,66 +1,9 @@
 openapi: 3.1.0
 info:
-  title: Gmail API for Margot Sinclair
-  description: Enables Margot Sinclair GPT to read, write, and delete messages using the Gmail API.
+  title: Test API
+  description: A test OpenAPI specification.
   version: 1.0.0
 servers:
   - url: https://example.com
-    description: Test server for debugging
-paths:
-  /gmail/v1/users/{userId}/messages:
-    get:
-      operationId: listMessages
-      summary: List messages in the user's mailbox.
-      description: Retrieves a list of messages in the specified user's mailbox.
-      parameters:
-        - name: userId
-          in: path
-          required: true
-          description: The user's email address. Use "me" to indicate the authenticated user.
-          schema:
-            type: string
-        - name: q
-          in: query
-          required: false
-          description: A query string to filter messages (e.g., 'is:unread').
-          schema:
-            type: string
-        - name: maxResults
-          in: query
-          required: false
-          description: Maximum number of messages to return.
-          schema:
-            type: integer
-        - name: pageToken
-          in: query
-          required: false
-          description: Token to retrieve a specific page of results.
-          schema:
-            type: string
-      responses:
-        '200':
-          description: A list of messages in the user's mailbox.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  messages:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: string
-                        threadId:
-                          type: string
-                  nextPageToken:
-                    type: string
-                  resultSizeEstimate:
-                    type: integer
-        '401':
-          description: Unauthorized. The request requires user authentication.
-        '403':
-          description: Forbidden. Access is denied.
-        '500':
-          description: Internal server error.
+    description: Example server
+paths: {}

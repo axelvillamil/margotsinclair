@@ -4,8 +4,8 @@ info:
   description: Enables Margot Sinclair GPT to read, write, and delete messages using the Gmail API.
   version: 1.0.0
 servers:
-  - url: https://gmail.googleapis.com
-    description: Gmail API base URL
+  - url: https://example.com
+    description: Test server for debugging
 paths:
   /gmail/v1/users/{userId}/messages:
     get:
